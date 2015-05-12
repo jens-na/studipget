@@ -32,17 +32,17 @@ Usage
 ---
 List all courses
 ```
-$ studipget.pl -l
+$ studipget -l
 ```
 
 List all files for a specific course
 ```
-$ studipget.pl -c 2 -l
+$ studipget -c 2 -l
 ```
 
 Download file 4 from course 2
 ```
-$ studipget.pl -c 2 -f 4
+$ studipget -c 2 -f 4
 ```
 
 Limitations
