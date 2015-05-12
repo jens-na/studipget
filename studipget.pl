@@ -1,5 +1,5 @@
 #!/usr/bin/env perl
-# stduipget, a tool to get files from a Stud.IP instance.
+# studipget, a tool to get files from a Stud.IP instance.
 # 
 # Copyright (C) 2015, Jens Nazarenus <me at jens-na dot de>
 #
