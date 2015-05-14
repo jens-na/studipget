@@ -2,6 +2,7 @@
 # studipget, a tool to get files from a Stud.IP instance.
 # 
 # Copyright (C) 2015, Jens Nazarenus <me at jens-na dot de>
+# Copyright (C) 2015, Jan Niklas Böhm <mail at jnboehm dot com>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

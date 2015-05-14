@@ -57,3 +57,4 @@ License and Copyright
 Licensed under the GNU General Public License 3.
 
 (C) Jens Nazarenus, 2015
+(C) Jan Niklas Böhm, 2015
