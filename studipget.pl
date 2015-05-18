@@ -166,8 +166,10 @@ sub dl_file_by_id {
 #)Nothing
 sub dl {
   my ($name, $url) = @_;
-  print("GET " . $url . "\n");
-  $client->get( $url, ':content_file' => "$folder/$name" );
+  
+  if(! -e "$folder/$name" || ask_overwrite("$folder/$name")) {
+    $client->get( $url, ':content_file' => "$folder/$name" );
+  }
 }
 
 # Try to log in and check for authentication errors.
@@ -245,6 +247,25 @@ sub load_cfg {
     if($key eq "passwd") { $pass = $value; }
   }
   return ($user, $pass, $instance);
+}
+
+# Asks the user if the file should be overwritten with the file on the
+# server.
+#
+# Parameters:
+# filename - the destination file name
+#
+# Returns:
+# 1 - if the users answer was 'yes', 'Yes', 'y' or 'Yooo', ...
+# 0 - otherwise
+sub ask_overwrite {
+  my ($filename) = @_;
+  say("Overwrite $filename [y|n]: ");
+  my $answer = <>;
+  if($answer =~ /^[yY].*/) {
+    return 1;
+  }
+  return 0;
 }
 
 # Prints the tools usage and exit with exit code 0.
